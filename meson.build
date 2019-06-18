@@ -14,4 +14,5 @@ endif
 fmt_dep = dependency('fmt', fallback: ['fmt', 'fmt_dep'])
 
 subdir('src')
+subdir('tests')
 
