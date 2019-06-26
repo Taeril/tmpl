@@ -13,7 +13,7 @@ std::string url_encode(std::string const& value) {
 
 	while((n = value.find_first_not_of(letters, m)) != std::string::npos) {
 		ret.append(value.substr(m, n-m));
-		ret.append(fmt::format("%{:02X}", value[n]));
+		ret.append(fmt::format("%{:02X}", static_cast<unsigned char>(value[n])));
 
 		m = n + 1;
 	}
@@ -38,7 +38,7 @@ std::string html_escape(std::string const& value) {
 			case '>': ret.append("&gt;"); break;
 			case '"': ret.append("&quot;"); break;
 			default:
-				ret.append(fmt::format("&#{:d};", value[n]));
+				ret.append(fmt::format("&#{:d};", static_cast<unsigned char>(value[n])));
 		}
 
 		m = n + 1;
