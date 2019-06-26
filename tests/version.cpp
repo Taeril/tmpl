@@ -3,7 +3,7 @@
 #include "catch.hpp"
 
 #include <string>
-#include "tmpl.hpp"
+#include <tmpl/tmpl.hpp>
 
 TEST_CASE("Version") {
 	std::string version = tmpl::version();

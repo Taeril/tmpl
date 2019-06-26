@@ -22,13 +22,12 @@ tmpl_lib = static_library('tmpl', sources,
   install : true,
   gnu_symbol_visibility : 'hidden',
   dependencies: fmt_dep,
-  include_directories: '.',
+  include_directories: [tmpl_inc, '../include/tmpl'],
 )
-install_headers('tmpl.hpp')
 
 tmpl_dep = declare_dependency(
   link_with: tmpl_lib,
-  include_directories: '.',
+  include_directories: tmpl_inc,
 )
 
 

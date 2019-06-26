@@ -6,7 +6,7 @@
 #include <cctype>
 #include <algorithm>
 
-#include "tmpl.hpp"
+#include <tmpl/tmpl.hpp>
 
 TEST_CASE("default") {
 	tmpl::Template tmpl;

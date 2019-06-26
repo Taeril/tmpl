@@ -4,7 +4,7 @@
 
 // https://github.com/catchorg/Catch2
 
-#include "tmpl.hpp"
+#include <tmpl/tmpl.hpp>
 
 TEST_CASE("Empty") {
 	tmpl::Template tmpl;
