@@ -15,5 +15,7 @@ fmt_dep = dependency('fmt', fallback: ['fmt', 'fmt_dep'])
 
 subdir('include')
 subdir('src')
-subdir('tests')
+if(not get_option('skip_tests'))
+  subdir('tests')
+endif
 
