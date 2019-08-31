@@ -51,6 +51,8 @@ class Data::Value {
 		ValueType* get(std::string const& key);
 
 		void print(std::string pre="");
+
+		void clear();
 	private:
 		std::unordered_map<
 			std::string,

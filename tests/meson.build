@@ -16,3 +16,8 @@ filters_exe = executable('filters', 'filters.cpp', link_with: main_lib,
 )
 test('filters', filters_exe)
 
+clear_exe = executable('clear', 'clear.cpp', link_with: main_lib,
+  dependencies: tmpl_dep,
+)
+test('clear', clear_exe)
+

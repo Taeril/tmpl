@@ -109,6 +109,10 @@ void Data::Value::print(std::string pre) {
 	}
 }
 
+void Data::Value::clear() {
+	value_.clear();
+}
+
 // Template
 
 enum class State {
